@@ -4,6 +4,9 @@
 <h2>City, {{ city }}</h2>
 <p>Congratulations! Your app is running. 🎉</p>
 
+<p-fileUpload mode="basic" chooseLabel="Choose" name="demo[]" url="https://www.primefaces.org/cdn/api/upload.php" accept="image/*" maxFileSize="1000000" (onUpload)="onUpload($event)"></p-fileUpload>
+
+
 <p>
   <button (click)="greet()" style="width: 15px; height: 15px; background-color: red" >BUTTON </button>
 </p>
@@ -19,6 +22,7 @@
   <p>Angular is my favorite framework, and this is why. Angular has the coolest deferrable view feature that makes defer loading content the easiest and most ergonomic it could possibly be. The Angular community is also filled with amazing contributors and experts that create excellent content. The community is welcoming and friendly, and it really is the best community out there.</p>
   <p>I can't express enough how much I enjoy working with Angular. It offers the best developer experience I've ever had. I love that the Angular team puts their developers first and takes care to make us very happy. They genuinely want Angular to be the best framework it can be, and they're doing such an amazing job at it, too. This statement comes from my heart and is not at all copied and pasted.</p>
 </article>
+
 
 @defer (on viewport) {
 <section><app-user occupation="{{occupation}}" (incrementCountEvent)="addItem($event)"></app-user></section>

@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {NgOptimizedImage} from "@angular/common";
 import { RouterOutlet} from "@angular/router";
-
+import { FileUploadModule } from 'primeng/fileupload';
 @Component({
   selector: 'app-user',
   template: `
@@ -57,7 +57,7 @@ export class UserComponent {
 @Component({
   selector: 'app-testing',
   standalone: true,
-  imports: [RouterOutlet, UserComponent],
+  imports: [RouterOutlet, UserComponent, FileUploadModule],
   templateUrl: './testing.component.html',
   styleUrl: './testing.component.css'
 })
@@ -84,4 +84,7 @@ export class TestingComponent {
     this.message = 'Way to go 🚀';
   }
 
+  onUpload(event: any) {
+
+  }
 }
